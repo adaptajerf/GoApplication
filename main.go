@@ -4,8 +4,11 @@ import "fmt"
 
 func main() {
 	fmt.Print("Hello World")
-	a := (1,2,3,4,5,6,7,8,9,0) 
+	var a [10]int
 	for i := 0; i < 10; i++ {
-
+		for j := 0; j < len(a); j++ {
+			a[i] += i * j
+		}
 	}
+	fmt.Println(a)
 }
